@@ -6,7 +6,7 @@
 /*   By: besalort <besalort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:41:06 by besalort          #+#    #+#             */
-/*   Updated: 2024/04/24 18:27:29 by besalort         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:45:38 by besalort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	HumanB {
 		~HumanB();
 		
 		void	setWeapon(Weapon& weapon);
-		void	attack();
+		void	attack() const;
 };
 
 #endif

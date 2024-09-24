@@ -6,7 +6,7 @@
 /*   By: besalort <besalort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:41:15 by besalort          #+#    #+#             */
-/*   Updated: 2024/04/24 18:32:35 by besalort         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:48:07 by besalort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,28 @@ HumanB::HumanB() {
 	// constructeur
 	this->name = "Unknow";
 	this->weapon = NULL;
-	std::cout << "HumanB " << this->name << " has been created, no weapon equiped. " << std::endl;
+	std::cout << GREEN << "HumanB " << this->name << " has been created, no weapon equiped." << WHITE << std::endl;
 }
 
 HumanB::HumanB(std::string name) {
 	// constructeur
 	this->name = name;
 	this->weapon = NULL;
-	std::cout << "\033[1;32mHumanB " << this->name << " has been created, no weapon equiped.\033[0m" << std::endl;
+	std::cout << GREEN << "HumanB " << this->name << " has been created, no weapon equiped." << WHITE << std::endl;
 }
 
 HumanB::~HumanB() {
 	// destructeur
-	std::cout << "\033[1;31mHumanB " << this->name << " destroyed\033[0m" << std::endl;
+	std::cout << RED << "HumanB " << this->name << " destroyed" << WHITE << std::endl;
 }
 
 void	HumanB::setWeapon(Weapon& weapon) {
 	this->weapon = &weapon; //le pointeur sur weapon devient = a la reference du nouveau weapon.
+	std::cout << "HumanB " << this->name << " equip " << BLUE << weapon.getType() << WHITE << std::endl;
 	return ;
 }
 
-void	HumanB::attack() {
+void	HumanB::attack() const{
 	if (this->weapon != NULL)
 		std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
 }

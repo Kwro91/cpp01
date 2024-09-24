@@ -6,7 +6,7 @@
 /*   By: besalort <besalort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:13:48 by besalort          #+#    #+#             */
-/*   Updated: 2024/04/24 18:37:35 by besalort         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:49:07 by besalort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ Weapon::~Weapon(void) {
 }
 
 void	Weapon::setType(std::string type) {
-	std::cout << "[Weapon] \033[1;34m" << this->type << "\033[0m became \033[1;34m" << type << "\033[0m" << std::endl;
+	std::cout << "[Weapon]" << BLUE << this->type << WHITE << " evolve to " << BLUE << type << WHITE << std::endl;
 	this->type = type;
 	return ;
 }
 
-const std::string	Weapon::getType() {
+const std::string	Weapon::getType() const{
 	const std::string& type = this->type;
 	return (type);
 }
