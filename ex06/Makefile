@@ -6,7 +6,7 @@
 #    By: besalort <besalort@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/26 16:44:21 by besalort          #+#    #+#              #
-#    Updated: 2024/09/24 17:56:38 by besalort         ###   ########.fr        #
+#    Updated: 2024/09/25 14:59:21 by besalort         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = ./main.cpp \
 
 CC =	c++
 
-CPPFLAGS = -Wall -Werror -Wextra
+CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 AR = ar rcs
 

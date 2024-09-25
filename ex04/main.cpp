@@ -6,7 +6,7 @@
 /*   By: besalort <besalort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 15:15:27 by besalort          #+#    #+#             */
-/*   Updated: 2024/04/25 20:04:03 by besalort         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:08:23 by besalort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,24 @@
 #include <string.h>
 #include <fstream>
 
-void	replaceS1toS2(std::string filename, std::string s1, std::string s2) {
-	std::ifstream	file(filename);
+void	replaceS1toS2(char *filename, std::string s1, std::string s2) {
+	std::ifstream	file;
+	std::ofstream	rfile;
 	std::string		line;
 	std::string		str;
 	size_t			pos;
 
-	if (file.is_open())
+	file.open(filename);
+
+	if (!file.fail())
 	{
-		std::ofstream rfile(filename + ".replace");
+		rfile.open((std::string(filename) + ".replace").c_str());
+		if (rfile.fail())
+		{
+			std::cout << "Error: file does not exist" << std::endl;
+			file.close();
+			return ;
+		}
 		while (getline(file, line))
 		{
 			str += line;
