@@ -6,7 +6,7 @@
 /*   By: besalort <besalort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:08:06 by besalort          #+#    #+#             */
-/*   Updated: 2024/09/24 17:52:16 by besalort         ###   ########.fr       */
+/*   Updated: 2024/10/16 12:24:51 by besalort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 
 int main()
 {
-	//ex pour expliquer le choix de pointeur et reference pour les weapon de humanA/B
-	// int a = 5; 
-	// int &b = a;
-	// int *c = &a;
-	// std::cout << a << " " << b << std::endl;
-	// std::cout << a << " " << *c << std::endl;
-
+	// pour expliquer le choix entre pointeur et reference
+	// int a;
+	// int &b;
+	// int *c;
+	// (void)a;
+	// (void)b;
+	// (void)c;
 	{
 		Weapon club = Weapon("crude spiked club");
 		HumanA bob("Bob", club);
